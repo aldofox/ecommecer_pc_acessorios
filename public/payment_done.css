@@ -1,0 +1,141 @@
+/* Página de pagamento */
+.payment-page {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.payment-form label {
+    font-weight: 600;
+    color: #333;
+}
+.payment-form input {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+.payment-form button {
+    margin-top: 1rem;
+}
+
+/* Página de conclusão */
+.done-page {
+    text-align: center;
+    padding: 3rem 2rem;
+}
+.done-page h1 {
+    font-size: 2rem;
+    color: #2a9d8f;
+    margin-bottom: 1rem;
+}
+.done-page p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+.done-page .btn {
+    padding: 0.75rem 1.5rem;
+}
+/* Página de checkout */
+.checkout-page {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.checkout-page h1 {
+    margin-bottom: 1.5rem;
+    color: #264653;
+}
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.checkout-form label {
+    font-weight: 600;
+    color: #333;
+}
+.checkout-form input {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+.checkout-form button {
+    margin-top: 1rem;
+}
+/* Barra de progresso */
+.checkout-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.checkout-steps .step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    font-weight: 600;
+    color: #999;
+}
+
+.checkout-steps .step.active {
+    color: #264653;
+}
+
+.checkout-steps .step.completed {
+    color: #2a9d8f;
+}
+
+.checkout-steps .step::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto 0.5rem;
+    border-radius: 50%;
+    background: #ccc;
+    transition: background 0.3s;
+}
+
+.checkout-steps .step.active::before {
+    background: #264653;
+}
+
+.checkout-steps .step.completed::before {
+    background: #2a9d8f;
+}
+
+/* Linha entre os steps */
+.checkout-steps .step::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: -50%;
+    width: 100%;
+    height: 4px;
+    background: #ccc;
+    z-index: -1;
+}
+.checkout-steps .step:last-child::after {
+    display: none;
+}
+.checkout-steps .step.completed::after {
+    background: #2a9d8f;
+}

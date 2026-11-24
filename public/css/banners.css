@@ -1,0 +1,152 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Layout principal */
+.conatiner-admin {
+    display: flex;
+    min-height: 100vh;
+    background: #111827; /* fundo escuro */
+    color: #e5e7eb;
+}
+
+/* Sidebar */
+.sidebar-admin {
+    width: 220px;
+    background: #1f2937;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.sidebar-admin nav ul {
+    list-style: none;
+}
+
+.sidebar-admin nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar-admin nav ul li a {
+    color: #9ca3af;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sidebar-admin nav ul li a:hover,
+.sidebar-admin nav ul li a.active {
+    background: #2563eb;
+    color: #fff;
+    border-radius: 6px;
+}
+
+/* Conteúdo */
+.content-admin {
+    flex: 1;
+    padding: 30px;
+    background: #111827;
+}
+
+.content-admin h2 {
+    margin-bottom: 20px;
+    color: #f9fafb;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+}
+
+.btn-danger {
+    background: #dc2626;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background: #b91c1c;
+}
+
+/* Formulário */
+form {
+    display: grid;
+    gap: 15px;
+    max-width: 600px;
+}
+
+form label {
+    font-weight: 600;
+    color: #d1d5db;
+}
+
+form input, form select, form textarea {
+    padding: 10px;
+    border: 1px solid #374151;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+    background: #1f2937;
+    color: #f9fafb;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    border-color: #2563eb;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
+
+/* Tabela */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #1f2937;
+    border-radius: 8px;
+    overflow: hidden;
+    color: #f9fafb;
+}
+
+.table thead {
+    background: #2563eb;
+    color: #fff;
+}
+
+.table th, .table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #374151;
+}
+
+.table tr:hover {
+    background: #374151;
+}
+
+/* Imagens */
+.table img {
+    border: 2px solid #374151;
+    border-radius: 6px;
+    transition: transform 0.3s;
+    max-height: 60px;
+}
+
+.table img:hover {
+    transform: scale(1.05);
+}

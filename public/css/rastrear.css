@@ -1,0 +1,83 @@
+/* ── Rastrear Pedido ─────────────────────────────────── */
+.rastrear-page { max-width:720px; margin:0 auto; padding:28px 20px 60px; }
+.rastrear-inner h1 { font-size:1.5rem; color:var(--text-primary); display:flex; align-items:center; gap:10px; margin-bottom:6px; }
+.rastrear-inner h1 i { color:var(--accent); }
+.rastrear-sub { color:var(--text-secondary); font-size:.9rem; margin-bottom:24px; }
+
+/* Formulário */
+.rastrear-form { background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:24px; margin-bottom:28px; }
+.rastrear-error { background:rgba(239,68,68,.08); border:1px solid rgba(239,68,68,.25); color:#f87171; border-radius:8px; padding:10px 14px; font-size:.88rem; margin-bottom:16px; display:flex; align-items:center; gap:8px; }
+.form-row { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:16px; }
+.form-field { flex:1; min-width:180px; display:flex; flex-direction:column; gap:5px; }
+.form-field label { font-size:.82rem; color:var(--text-secondary); font-weight:500; }
+.form-field input { padding:10px 14px; background:var(--bg-surface); border:1px solid var(--border-light); border-radius:8px; color:var(--text-primary); font-size:.9rem; outline:none; transition:border-color .2s; }
+.form-field input:focus { border-color:var(--accent); }
+
+/* Resultado */
+.rastrear-result { background:var(--bg-card); border:1px solid var(--border); border-radius:14px; overflow:hidden; margin-bottom:28px; }
+.rastrear-result-header { display:flex; justify-content:space-between; align-items:center; padding:20px 24px; border-bottom:1px solid var(--border); gap:12px; flex-wrap:wrap; }
+.rastrear-result-header h2 { font-size:1.1rem; color:var(--text-primary); font-weight:700; margin:0; }
+.rastrear-date { font-size:.78rem; color:var(--text-muted); }
+.rastrear-total { font-size:1.2rem; font-weight:800; color:var(--neon); }
+
+/* Timeline */
+.timeline { padding:24px; display:flex; flex-direction:column; gap:0; }
+.timeline-step {
+  display:flex; align-items:flex-start; gap:16px;
+  position:relative; padding-bottom:28px;
+}
+.timeline-step:last-child { padding-bottom:0; }
+
+.step-icon {
+  width:40px; height:40px; border-radius:50%; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  font-size:1rem; z-index:1;
+  background:var(--bg-surface); border:2px solid var(--border);
+  color:var(--text-muted);
+  transition:background .3s, border-color .3s, color .3s;
+}
+.timeline-step.done .step-icon { background:rgba(108,99,255,.15); border-color:var(--accent); color:var(--accent); }
+.timeline-step.current .step-icon { background:var(--accent); border-color:var(--accent); color:#fff; box-shadow:0 0 0 4px rgba(108,99,255,.2); }
+.timeline-step.canceled .step-icon { background:rgba(239,68,68,.15); border-color:#ef4444; color:#ef4444; }
+
+.step-body { flex:1; padding-top:8px; }
+.step-body strong { font-size:.92rem; color:var(--text-primary); display:block; margin-bottom:3px; }
+.step-body p { font-size:.82rem; color:var(--text-secondary); line-height:1.5; }
+.step-pending { color:var(--text-muted) !important; font-style:italic; }
+
+/* Linha conectora */
+.step-connector {
+  position:absolute; left:19px; top:40px; bottom:0;
+  width:2px; background:var(--border);
+  z-index:0;
+}
+.step-connector.done { background:var(--accent); }
+
+/* Itens do pedido */
+.rastrear-items { padding:0 24px 20px; border-top:1px solid var(--border); }
+.rastrear-items h3 { font-size:.82rem; text-transform:uppercase; letter-spacing:.5px; color:var(--text-muted); padding:16px 0 12px; }
+.rastrear-item { display:flex; align-items:center; gap:12px; padding:8px 0; border-bottom:1px solid var(--border); }
+.rastrear-item:last-child { border-bottom:none; }
+.rastrear-item img { width:48px; height:48px; object-fit:contain; background:var(--bg-surface); border-radius:8px; padding:4px; flex-shrink:0; }
+.rastrear-item-info { flex:1; display:flex; flex-direction:column; gap:2px; }
+.rastrear-item-info strong { font-size:.85rem; color:var(--text-primary); }
+.rastrear-item-info span   { font-size:.75rem; color:var(--text-muted); }
+.rastrear-item-total { font-size:.9rem; font-weight:700; color:var(--neon); white-space:nowrap; }
+
+/* Endereço */
+.rastrear-address { display:flex; align-items:flex-start; gap:12px; padding:16px 24px; background:var(--bg-surface); }
+.rastrear-address i { color:var(--accent); font-size:1rem; margin-top:3px; flex-shrink:0; }
+.rastrear-address strong { display:block; font-size:.82rem; color:var(--text-primary); margin-bottom:3px; }
+.rastrear-address p { font-size:.8rem; color:var(--text-secondary); }
+
+/* Meus pedidos */
+.my-orders-section { background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:20px 24px; }
+.my-orders-section h3 { font-size:1rem; color:var(--text-primary); display:flex; align-items:center; gap:8px; margin-bottom:16px; }
+.my-orders-section h3 i { color:var(--accent); }
+.my-orders-list { display:flex; flex-direction:column; gap:10px; }
+.my-order-row { display:flex; align-items:center; gap:12px; flex-wrap:wrap; padding:10px 0; border-bottom:1px solid var(--border); }
+.my-order-row:last-child { border-bottom:none; }
+.my-order-id   { font-weight:700; color:var(--text-primary); font-size:.9rem; display:block; }
+.my-order-date { font-size:.75rem; color:var(--text-muted); }
+.my-order-total { font-size:.95rem; font-weight:700; color:var(--neon); margin-left:auto; }
+.status-pill { display:inline-block; padding:3px 10px; border-radius:99px; font-size:.72rem; font-weight:700; }

@@ -1,0 +1,21 @@
+# Local configuration and credentials
+/config/config.php
+/config/mail.php
+/.env
+/.env.*
+
+# Installed dependencies and downloaded archives
+/vendor/
+/phpmailer.zip
+
+# Local maintenance/test scripts containing machine-specific settings
+/fx_imgage.php
+/gerra_senha.php
+/get_phpmailer.php
+/download_phpmailer.php
+/test_conn.php
+/60*
+
+# Operating system files
+Thumbs.db
+.DS_Store

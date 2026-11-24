@@ -1,0 +1,16 @@
+Options -Indexes
+RewriteEngine On
+
+# Páginas de erro personalizadas
+ErrorDocument 404 /404.php
+ErrorDocument 500 /500.php
+
+# Ignora arquivos e diretórios que realmente existem
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Se existe o arquivo .php correspondente, usa ele internamente
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([a-z0-9-]+)/?$ category.php?slug=$1 [L]
+
+DirectoryIndex index.php

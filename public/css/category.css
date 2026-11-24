@@ -1,0 +1,340 @@
+/* ═══════════════════════════════════════════════
+   Category Page — Loja Gamer
+   ═══════════════════════════════════════════════ */
+
+/* ── Breadcrumb ──────────────────────────────── */
+.breadcrumb {
+  max-width: 1200px;
+  margin: 16px auto 0;
+  padding: 0 20px;
+  font-size: 0.85rem;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.breadcrumb a {
+  color: #00ffcc;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb .sep {
+  color: #4b5563;
+}
+
+/* ── Category Page ───────────────────────────── */
+.category-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+/* ── Layout: filtros + grid ──────────────────── */
+.category-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 28px;
+  margin-top: 20px;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .category-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Filtros ─────────────────────────────────── */
+.filters {
+  background: #1a1828;
+  border: 1px solid #2a2740;
+  border-radius: 12px;
+  padding: 20px;
+  position: sticky;
+  top: 80px;
+}
+
+.filters h3 {
+  font-size: 1rem;
+  color: #e5e7eb;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filters h3 i {
+  color: #00ffcc;
+}
+
+.filter-group {
+  margin-bottom: 14px;
+}
+
+.filter-group label {
+  display: block;
+  font-size: 0.82rem;
+  color: #9ca3af;
+  margin-bottom: 6px;
+}
+
+.filter-group input,
+.filter-group select {
+  width: 100%;
+  padding: 8px 32px 8px 12px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid #2a2740;
+  border-radius: 8px;
+  color: #e5e7eb;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.filter-group input { padding: 8px 12px; }
+
+.filter-group input:focus,
+.filter-group select:focus {
+  border-color: #00ffcc;
+}
+
+/* ── Área de produtos ────────────────────────── */
+.products-area {
+  min-width: 0;
+}
+
+.category-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.category-header h1 {
+  font-size: 1.6rem;
+  color: #e5e7eb;
+  font-weight: 700;
+}
+
+.result-count {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* ── Grade de produtos ───────────────────────── */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 20px;
+}
+
+/* ── Card de produto ─────────────────────────── */
+.product-card {
+  background: #1a1828;
+  border: 1px solid #2a2740;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  border-color: #00ffcc44;
+  box-shadow: 0 8px 24px rgba(0, 255, 204, 0.08);
+}
+
+.product-card.out-of-stock {
+  opacity: 0.7;
+}
+
+.card-image {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #13111f;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 12px;
+  transition: transform 0.3s;
+}
+
+.product-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.badge-sold-out {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ef4444;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+.card-body {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 6px;
+}
+
+.card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.card-title a {
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.card-title a:hover {
+  color: #00ffcc;
+}
+
+.card-desc {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  line-height: 1.4;
+  flex: 1;
+}
+
+/* ── Estrelas ────────────────────────────────── */
+.card-rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.8rem;
+}
+
+.card-rating .fa-star {
+  color: #f59e0b;
+}
+
+.card-rating .fa-regular.fa-star {
+  color: #4b5563;
+}
+
+.card-rating span {
+  color: #9ca3af;
+  font-size: 0.75rem;
+  margin-left: 4px;
+}
+
+/* ── Preço ───────────────────────────────────── */
+.card-price {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #00ffcc;
+  margin: 4px 0 8px;
+}
+
+/* ── Botões ──────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn:active { transform: scale(0.97); }
+
+.btn-primary {
+  background: #00ffcc;
+  color: #111;
+}
+
+.btn-primary:hover { opacity: 0.85; }
+
+.btn-secondary {
+  background: rgba(255,255,255,0.07);
+  color: #e5e7eb;
+  border: 1px solid #2a2740;
+}
+
+.btn-secondary:hover { opacity: 0.85; }
+
+.btn-block {
+  width: 100%;
+}
+
+.btn[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ── Estado vazio ────────────────────────────── */
+.empty-category {
+  text-align: center;
+  padding: 60px 20px;
+  color: #9ca3af;
+}
+
+.empty-category i {
+  font-size: 3rem;
+  color: #4b5563;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* ── Paginação ───────────────────────────────── */
+.pagination {
+  display: flex;
+  gap: 8px;
+  margin-top: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: #1a1828;
+  border: 1px solid #2a2740;
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.page-btn:hover {
+  border-color: #00ffcc;
+  color: #00ffcc;
+}
+
+.page-btn.active {
+  background: #00ffcc;
+  color: #111;
+  border-color: #00ffcc;
+  font-weight: 700;
+}
